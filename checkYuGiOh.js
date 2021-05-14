@@ -1,4 +1,7 @@
 const checkYuGiOh = (num) => {
+  if (typeof num !== "number") {
+    return `invalid parameter: ${num}`;
+  }
   let nums = Array.from({ length: num }, (_, i) => i + 1);
   let results = [];
   for (let i = 0; i < nums.length; i++) {
