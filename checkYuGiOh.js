@@ -1,4 +1,4 @@
-function checkYuGiOh(num) {
+const checkYuGiOh = (num) => {
   let nums = Array.from({ length: num }, (_, i) => i + 1);
   let results = [];
   for (let i = 0; i < nums.length; i++) {
@@ -22,6 +22,6 @@ function checkYuGiOh(num) {
   }
 
   return results;
-}
+};
 
 checkYuGiOh(10);
