@@ -9,4 +9,4 @@ const convertFahrToCelsius = (deg) => {
   return `${celsius}\xB0C`;
 };
 
-console.log(convertFahrToCelsius({ temp: 0 }));
+convertFahrToCelsius({ temp: 0 });
