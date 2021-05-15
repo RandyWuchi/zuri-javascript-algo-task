@@ -1,5 +1,6 @@
 const checkYuGiOh = (num) => {
-  if (typeof num !== "number") {
+  let parsedNum = parseInt(num);
+  if (isNaN(parsedNum)) {
     return `invalid parameter: ${num}`;
   }
   let nums = Array.from({ length: num }, (_, i) => i + 1);
