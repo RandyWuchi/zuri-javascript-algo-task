@@ -1,5 +1,9 @@
 const convertFahrToCelsius = (deg) => {
-  let parsedDeg = parseInt(deg);
+  let parsedDeg;
+
+  if (!Array.isArray(deg)) {
+    parsedDeg = parseInt(deg);
+  }
   if (isNaN(parsedDeg)) {
     return `${JSON.stringify(deg)} is not a valid number but a/an ${
       Array.isArray(deg) ? "array" : typeof deg
@@ -11,4 +15,4 @@ const convertFahrToCelsius = (deg) => {
   return `${c}\xB0C`;
 };
 
-convertFahrToCelsius({ temp: 0 });
+console.log(convertFahrToCelsius([1, 2, 3]));
