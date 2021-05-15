@@ -1,7 +1,11 @@
 const checkYuGiOh = (num) => {
-  let parsedNum = parseInt(num);
-  if (isNaN(parsedNum)) {
-    return `invalid parameter: ${num}`;
+  let parsedNum;
+
+  if (!Array.isArray(num)) {
+    parsedNum = parseInt(num);
+  }
+  if (isNaN(parsedNum) || parsedNum === 0) {
+    return `invalid parameter: ${JSON.stringify(num)}`;
   }
   let nums = Array.from({ length: num }, (_, i) => i + 1);
   let results = [];
@@ -28,4 +32,4 @@ const checkYuGiOh = (num) => {
   return results;
 };
 
-checkYuGiOh(10);
+console.log(checkYuGiOh(15));
