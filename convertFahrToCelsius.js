@@ -1,5 +1,6 @@
 const convertFahrToCelsius = (deg) => {
-  if (typeof deg !== "number") {
+  let parsedDeg = parseInt(deg);
+  if (isNaN(parsedDeg)) {
     return `${JSON.stringify(deg)} is not a valid number but a/an ${
       Array.isArray(deg) ? "array" : typeof deg
     }`;
