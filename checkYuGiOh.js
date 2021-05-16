@@ -29,6 +29,7 @@ const checkYuGiOh = (num) => {
     }
   }
 
+  console.log(results);
   return results;
 };
 
