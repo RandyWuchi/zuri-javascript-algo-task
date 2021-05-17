@@ -12,8 +12,8 @@ const convertFahrToCelsius = (deg) => {
 
   let celsius = ((deg - 32) * 5) / 9;
   let c = celsius.toFixed(4);
-  console.log(`${c}\xB0C`);
-  return `${c}\xB0C`;
+  console.log(c);
+  return `${c}`;
 };
 
 console.log(convertFahrToCelsius(0));
